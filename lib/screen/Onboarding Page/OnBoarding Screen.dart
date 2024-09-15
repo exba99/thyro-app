@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:thyroidclass/screen/Welcome/WelcomeScreen.dart';
-import 'package:thyroidclass/subpage/homepage/HomePage.dart';
+import 'package:thyroidclass/screen/Login/LoginScreen.dart';
 import 'OnBoarding Content.dart';
 import 'size_config.dart';
 
@@ -116,7 +115,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (context) => HomePage(),
+                                    builder: (context) => LoginScreen(),
                                   ));
                             },
                             child: Text(

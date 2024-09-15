@@ -56,6 +56,7 @@ dependencies:
   email_validator: ^2.1.17
   introduction_screen: ^3.0.2
   onboarding: ^4.0.2
+  process_run: ^1.2.0
 
 
 
@@ -66,6 +67,15 @@ dependencies:
 
 
 dev_dependencies:
+flutter_launcher_icons: ^0.13.1
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/logo.png"
+  adaptive_icon_background: "#FFFFFF"
+  adaptive_icon_foreground: "assets/images/logo.png"
+
   flutter_test:
     sdk: flutter
 
@@ -89,39 +99,7 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-     - assets/images/doctor.png
-     - assets/images/stethoscope.png
-     - assets/images/sadthyroid.png
-     - assets/images/happythyroid.png
-     - assets/images/update.png
-     - assets/images/welcome.png
-     - assets/images/WelcomeIcon.png
-     - assets/images/banner.png
-     - assets/images/profile.png
-     - assets/images/welcomethyrocare.jpg
-     - assets/images/medicinebanner.png
-     - assets/images/bloodworkbanner.png
-     - assets/images/symptomsbanner.png
-     - assets/images/icon_m.png
-     - assets/images/meds.png
-     - assets/images/drug.png
-     - assets/images/inhaler.png
-     - assets/images/pill_rounded.png
-     - assets/images/pill.png
-     - assets/images/syringe.png
-     - assets/images/ointment.png
-     - assets/images/LoadingPage.jpg
-     - assets/animations/Success Check.flr
-     - assets/images/HomeBloodTest.png
-     - assets/images/Formal Attire.png
-     - assets/images/RomaAG.jpg
-     - assets/images/MDenly.jpg
-     - assets/images/SignUp.png
-     - assets/images/Forgot.png
-     - assets/images/LogIn.png
-     - assets/images/1.png
-     - assets/images/2.png
-     - assets/images/3.png
+     - assets/images/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

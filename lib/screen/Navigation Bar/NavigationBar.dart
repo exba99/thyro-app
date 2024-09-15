@@ -40,28 +40,12 @@ class NavBar extends StatelessWidget {
                   MaterialPageRoute(
                     builder: (context) => Library(),
                   ))),
-          ListTile(
-              leading: Icon(Icons.info),
-              title: Text('About Us'),
-              onTap: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => AboutUs(),
-                  ))),
-          ListTile(
-              leading: Icon(Icons.description),
-              title: Text('Policy'),
-              onTap: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => Policy(),
-                  ))),
           Divider(),
           ListTile(
             title: Text('Sign Out'),
             leading: Icon(Icons.exit_to_app),
             onTap: () async {
-              await FirebaseAuth.instance.signOut();
+              //await FirebaseAuth.instance.signOut();
               Navigator.of(context).pushAndRemoveUntil(
                   MaterialPageRoute(builder: (c) => LoginScreen()),
                   (r) => false);

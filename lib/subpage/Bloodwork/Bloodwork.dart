@@ -28,7 +28,7 @@ class Bloodwork extends StatelessWidget {
                   ),
                 ])),
             Container(
-              margin: const EdgeInsets.only(left: 25, top: 25, right: 25),
+              margin: const EdgeInsets.only(left: 15, top: 25, right: 25),
               child: new Row(children: [
                 Icon(
                   Icons.bloodtype_rounded,
@@ -49,7 +49,7 @@ class Bloodwork extends StatelessWidget {
               height: 5.0,
             ),
             Container(
-              margin: const EdgeInsets.only(left: 25, top: 25, right: 25),
+              margin: const EdgeInsets.only(left: 15, top: 25, right: 25),
               child: new Row(children: [
                 Icon(
                   Icons.health_and_safety,
@@ -58,7 +58,7 @@ class Bloodwork extends StatelessWidget {
                 ),
                 SizedBox(width: 10),
                 Text(
-                  'This will guide you in determining whether you \n are hypothyroid, hyperthyroid, or euthyroid. ',
+                  'This will guide you in determining whether\nyou are hypothyroid, hyperthyroid, or euthyroid. ',
                   style: TextStyle(
                       fontFamily: 'Urbanist',
                       fontSize: 14,

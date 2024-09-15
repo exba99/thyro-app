@@ -29,64 +29,32 @@ class _HomePage extends State<HomePage> with TickerProviderStateMixin {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-        body: Container(
-            width: MediaQuery.of(context).size.width,
-            //color: Colors.red,
-            child: SingleChildScrollView(
-                child: Column(children: <Widget>[
-              Image.asset("assets/images/welcomethyrocare.jpg"),
-              SizedBox(
-                height: 1.0,
-              ),
-              Container(
-                  alignment: Alignment.topLeft,
-                  margin: const EdgeInsets.only(left: 10, top: 10, right: 10),
-                  child: new Column(children: <Widget>[
-                    Text(
-                      'How are you feeling today? Take a look and review the items listed below.',
-                      style: TextStyle(
-                          fontFamily: 'Urbanist',
-                          fontSize: 16,
-                          color: Colors.black87),
+      body: Container(
+        width: MediaQuery.of(context).size.width,
+        //color: Colors.red,
+        child: SingleChildScrollView(
+          child: Column(children: <Widget>[
+            Image.asset("assets/images/welcome.jpeg"),
+            SizedBox(
+              height: 1.0,
+            ),
+            Container(
+                alignment: Alignment.center,
+                margin: const EdgeInsets.only(left: 10, top: 30, right: 10),
+                child: new Column(children: <Widget>[
+                  Text(
+                    'How are you feeling today?\nTake a look and review the items listed below.',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontFamily: 'Urbanist',
+                      fontSize: 16,
+                      color: Colors.black87,
                     ),
-                  ])),
-              Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: <Widget>[
-                    TabBar(
-                        controller: _tabController,
-                        indicatorColor: Colors.teal,
-                        labelColor: Colors.teal,
-                        unselectedLabelColor: Colors.black54,
-                        tabs: <Widget>[
-                          Tab(
-                            child: Text(
-                              "Medicine",
-                              style: TextStyle(
-                                  fontSize: 16,
-                                  fontFamily: 'Urbanist',
-                                  fontWeight: FontWeight.bold),
-                            ),
-                          ),
-                          Tab(
-                            child: Text(
-                              "Blood Test",
-                              style: TextStyle(
-                                  fontSize: 16,
-                                  fontFamily: 'Urbanist',
-                                  fontWeight: FontWeight.bold),
-                            ),
-                          ),
-                        ]),
-                    Container(
-                        height: 300,
-                        child: TabBarView(
-                            controller: this._tabController,
-                            children: [
-                              HomeMedicine(),
-                              HomeBloodTest(),
-                            ]))
-                  ])
-            ]))));
+                  ),
+                ])),
+          ]),
+        ),
+      ),
+    );
   }
 }

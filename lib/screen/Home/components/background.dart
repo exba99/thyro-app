@@ -12,20 +12,27 @@ class Background extends StatelessWidget {
     var width = MediaQuery.of(context).size.width;
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-        body: SafeArea(
-            child: Container(
-                height: size.height * 0.12,
-                decoration: BoxDecoration(
-                    gradient: new LinearGradient(
-                        colors: [Colors.teal, Color(0xff51A9A9)])),
-                child: Stack(alignment: Alignment.center, children: <Widget>[
-                  Positioned(
-                      child: Image.asset(
-                    "assets/images/banner.png",
-                    width: size.width * 1,
-                    height: size.height * 0.08,
-                  )),
-                  child,
-                ]))));
+      body: SafeArea(
+        child: Container(
+          height: size.height * 0.12,
+          decoration: BoxDecoration(
+              gradient:
+                  new LinearGradient(colors: [Colors.teal, Color(0xff51A9A9)])),
+          child: Stack(
+            alignment: Alignment.center,
+            children: <Widget>[
+              Positioned(
+                child: Image.asset(
+                  "assets/images/banner.png",
+                  width: size.width * 1,
+                  height: size.height * 0.08,
+                ),
+              ),
+              child,
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }

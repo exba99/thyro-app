@@ -17,8 +17,8 @@ class _BodyState extends State<Body> {
   bool _isObscure3 = true;
   bool visible = false;
   final _formkey = GlobalKey<FormState>();
-  final TextEditingController emailController = new TextEditingController();
-  final TextEditingController passwordController = new TextEditingController();
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -110,7 +110,7 @@ class _BodyState extends State<Body> {
                                 ),
                                 SizedBox(height: 15.0),
                                 Container(
-                                    margin: EdgeInsets.fromLTRB(150, 0, 0, 20),
+                                    margin: EdgeInsets.fromLTRB(20, 0, 0, 0),
                                     //child: Text('Don\'t have an account? Create'),
                                     child: Text.rich(TextSpan(children: [
                                       TextSpan(
@@ -195,11 +195,11 @@ class _BodyState extends State<Body> {
   void signIn(String email, String password) async {
     if (_formkey.currentState!.validate()) {
       try {
-        UserCredential userCredential =
+        /* UserCredential userCredential =
             await FirebaseAuth.instance.signInWithEmailAndPassword(
           email: email,
           password: password,
-        );
+        ); */
         Navigator.pushReplacement(
           context,
           MaterialPageRoute(

@@ -40,8 +40,8 @@ class _BodyState extends State<Body> with TickerProviderStateMixin {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Image.asset(
-                  'assets/images/banner.png',
-                  height: 50,
+                  'assets/images/logo.png',
+                  height: 150,
                 ),
                 Container(
                   padding: const EdgeInsets.all(10.0),

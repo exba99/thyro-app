@@ -20,7 +20,7 @@ class _BloodworkFormState extends State<Result> {
   Future<void> predict() async {
     try {
       String url =
-          'http://127.0.0.1:5000/predict/?TSH=${widget.TSH}&T3=${widget.T3}&TT4=${widget.TT4}&T4U=${widget.T4U}&FTI=${widget.FTI}';
+          'https://tyhro-backend-app.onrender.com/predict/?TSH=${widget.TSH}&T3=${widget.T3}&TT4=${widget.TT4}&T4U=${widget.T4U}&FTI=${widget.FTI}';
       Response data = await get(Uri.parse(url));
       setState(() {
         prediction = jsonDecode(data.body)['classes'];
@@ -54,8 +54,8 @@ class _BloodworkFormState extends State<Result> {
             backgroundColor: const Color(0xFF1CC8A5),
             centerTitle: true,
             title: Image.asset(
-              'assets/images/banner.png',
-              height: 50,
+              'assets/images/logo.png',
+              height: 150,
             ),
             toolbarHeight: 70,
           ),
@@ -75,7 +75,7 @@ class _BloodworkFormState extends State<Result> {
                           'Blood Test Result',
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                            color: Colors.teal,
+                            color: Color.fromRGBO(255, 102, 196, 1),
                             fontFamily: "Pacifico",
                             fontSize: 24,
                             fontWeight: FontWeight.bold,
@@ -286,11 +286,12 @@ class _BloodworkFormState extends State<Result> {
                       SizedBox(height: size.height * 0.03),
                       ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: const Color(0xFF1CC8A5),
+                            backgroundColor:
+                                const Color.fromRGBO(255, 102, 196, 1),
                             padding: const EdgeInsets.all(15),
                             shape: RoundedRectangleBorder(
                                 side: const BorderSide(
-                                  color: Color(0xFF1CC8A5),
+                                  color: Color.fromRGBO(255, 102, 196, 1),
                                   width: 5,
                                 ),
                                 borderRadius: BorderRadius.circular(15)),

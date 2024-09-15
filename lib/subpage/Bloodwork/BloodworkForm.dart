@@ -13,7 +13,7 @@ class _BloodworkFormState extends State<BloodworkForm> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: const Color(0xFF1CC8A5),
+          backgroundColor: const Color.fromRGBO(255, 102, 196, 1),
           elevation: 0.0,
         ),
         body: Container(
@@ -53,7 +53,7 @@ class TopContainer extends StatelessWidget {
               offset: const Offset(0, 3.5),
             )
           ],
-          color: const Color(0xFF1CC8A5),
+          color: const Color.fromRGBO(255, 102, 196, 1),
         ),
         width: double.infinity,
         child: const Column(children: <Widget>[
@@ -272,7 +272,7 @@ class _BottomContainerState extends State<BottomContainer> {
                             borderRadius:
                                 BorderRadius.all(Radius.circular(16.0))),
                         elevation: 5.0,
-                        color: const Color(0xFF1CC8A5),
+                        color: const Color.fromRGBO(255, 102, 196, 1),
                         height: MediaQuery.of(context).size.height * 0.07,
                         onPressed: () async {
                           {

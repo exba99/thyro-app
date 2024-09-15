@@ -16,8 +16,7 @@ class _BodyState extends State<Body> {
   bool showProgress = false;
   bool visible = false;
   final _formkey = GlobalKey<FormState>();
-  final _auth = FirebaseAuth.instance;
-  CollectionReference ref = FirebaseFirestore.instance.collection('users');
+
   final TextEditingController passwordController = new TextEditingController();
   final TextEditingController confirmpassController =
       new TextEditingController();
@@ -174,7 +173,7 @@ class _BodyState extends State<Body> {
                                         style: TextStyle(
                                             color: Colors.black,
                                             fontSize: 14,
-                                            fontWeight: FontWeight.bold)),
+                                            fontWeight: FontWeight.bold,),),
                                   ),
                                 )
                               ],
@@ -205,7 +204,13 @@ class _BodyState extends State<Body> {
 
   signUp(String email, String password) async {
     if (_formkey.currentState!.validate()) {
-      try {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+          builder: (_) => LoginScreen(),
+        ),
+      );
+      /*try {
         UserCredential userCredential = await FirebaseAuth.instance
             .createUserWithEmailAndPassword(
               email: email,
@@ -227,9 +232,9 @@ class _BodyState extends State<Body> {
         }
       } catch (e) {
         print(e);
-      }
+      }*/
     }
 
-    CircularProgressIndicator();
+    //CircularProgressIndicator();
   }
 }

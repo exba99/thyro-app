@@ -49,7 +49,7 @@ class _HomePageState extends State<HomePage> {
     final GlobalBloc _globalBloc = Provider.of<GlobalBloc>(context);
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xFF1CC8A5),
+        backgroundColor: Color.fromRGBO(255, 102, 196, 1),
         elevation: 0.0,
       ),
       body: Container(
@@ -109,7 +109,7 @@ class TopContainer extends StatelessWidget {
             offset: Offset(0, 3.5),
           )
         ],
-        color: Color(0xFF1CC8A5),
+        color: Color.fromRGBO(255, 102, 196, 1),
       ),
       width: double.infinity,
       child: Column(
@@ -128,7 +128,7 @@ class TopContainer extends StatelessWidget {
             ),
           ),
           Divider(
-            color: Color(0xFF1CC8A5),
+            color: Color.fromRGBO(255, 102, 196, 1),
           ),
           Padding(
             padding: EdgeInsets.only(top: 12.0),
